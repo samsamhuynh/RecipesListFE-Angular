@@ -40,6 +40,7 @@ import {
   generate,
   identity,
   iif,
+  init_esm5,
   interval,
   isObservable,
   merge,
@@ -60,7 +61,8 @@ import {
   timer,
   using,
   zip
-} from "./chunk-GCCYFXLJ.js";
+} from "./chunk-NXKKPPFB.js";
+init_esm5();
 export {
   ArgumentOutOfRangeError,
   AsyncSubject,

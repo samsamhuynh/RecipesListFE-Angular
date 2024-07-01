@@ -1,8 +1,9 @@
 import { Injectable } from "@angular/core";
+import { Subject } from "rxjs/Subject";
+
 import { Recipe } from "./recipe.model";
 import { Ingredient } from "../shared/ingredient.model";
 import { ShoppingListService } from "../shopping-list/shopping-list.service";
-import { Subject } from "rxjs";
 
 @Injectable()
 export class RecipeService {
@@ -11,14 +12,14 @@ export class RecipeService {
   private recipes: Recipe[] = [
     new Recipe(
       "Tasty Schnitzel",
-      "this is simply",
-      "https://images.immediate.co.uk/production/volatile/sites/30/2023/09/Prawn-harissa-spaghetti--b3b0fdd.jpg?quality=90&webp=true&resize=600,545",
+      "A super-tasty Schnitzel - just awesome!",
+      "https://upload.wikimedia.org/wikipedia/commons/7/72/Schnitzel.JPG",
       [new Ingredient("Meat", 1), new Ingredient("French Fries", 20)]
     ),
     new Recipe(
       "Big Fat Burger",
-      "this is simply",
-      "https://images.immediate.co.uk/production/volatile/sites/30/2023/09/Prawn-harissa-spaghetti--b3b0fdd.jpg?quality=90&webp=true&resize=600,545",
+      "What else you need to say?",
+      "https://upload.wikimedia.org/wikipedia/commons/b/be/Burger_King_Angus_Bacon_%26_Cheese_Steak_Burger.jpg",
       [new Ingredient("Buns", 2), new Ingredient("Meat", 1)]
     ),
   ];
@@ -40,11 +41,15 @@ export class RecipeService {
   addRecipe(recipe: Recipe) {
     this.recipes.push(recipe);
     this.recipesChanged.next(this.recipes.slice());
-    console.log();
   }
 
   updateRecipe(index: number, newRecipe: Recipe) {
     this.recipes[index] = newRecipe;
+    this.recipesChanged.next(this.recipes.slice());
+  }
+
+  deleteRecipe(index: number) {
+    this.recipes.splice(index, 1);
     this.recipesChanged.next(this.recipes.slice());
   }
 }

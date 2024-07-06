@@ -3,10 +3,7 @@ import {
   first,
   share,
   switchMap
-} from "./chunk-NFGB4BGC.js";
-import {
-  init_esm5
-} from "./chunk-XJMXRHCD.js";
+} from "./chunk-BGHTEUUK.js";
 import {
   BehaviorSubject,
   Observable,
@@ -16,7 +13,7 @@ import {
   __spreadValues,
   merge,
   of
-} from "./chunk-B6S5TRUD.js";
+} from "./chunk-DD56SOZX.js";
 
 // node_modules/@angular/core/fesm2022/primitives/signals.mjs
 function defaultEquals(a, b) {
@@ -388,7 +385,6 @@ var WATCH_NODE = (() => {
 })();
 
 // node_modules/@angular/core/fesm2022/core.mjs
-init_esm5();
 function getClosureSafeProperty(objWithPropertyToExtract) {
   for (let key in objWithPropertyToExtract) {
     if (objWithPropertyToExtract[key] === getClosureSafeProperty) {
@@ -20657,4 +20653,4 @@ export {
    * found in the LICENSE file at https://angular.io/license
    *)
 */
-//# sourceMappingURL=chunk-27HBHGX5.js.map
+//# sourceMappingURL=chunk-FUTAX2QC.js.map

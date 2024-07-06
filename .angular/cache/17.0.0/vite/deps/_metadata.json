@@ -1,0 +1,77 @@
+{
+  "hash": "5e0c2008",
+  "browserHash": "65bff6c8",
+  "optimized": {
+    "@angular/common": {
+      "src": "../../../../../node_modules/@angular/common/fesm2022/common.mjs",
+      "file": "@angular_common.js",
+      "fileHash": "6aef49f2",
+      "needsInterop": false
+    },
+    "@angular/common/http": {
+      "src": "../../../../../node_modules/@angular/common/fesm2022/http.mjs",
+      "file": "@angular_common_http.js",
+      "fileHash": "93f3bf2c",
+      "needsInterop": false
+    },
+    "@angular/core": {
+      "src": "../../../../../node_modules/@angular/core/fesm2022/core.mjs",
+      "file": "@angular_core.js",
+      "fileHash": "390357e4",
+      "needsInterop": false
+    },
+    "@angular/forms": {
+      "src": "../../../../../node_modules/@angular/forms/fesm2022/forms.mjs",
+      "file": "@angular_forms.js",
+      "fileHash": "22b016fc",
+      "needsInterop": false
+    },
+    "@angular/platform-browser": {
+      "src": "../../../../../node_modules/@angular/platform-browser/fesm2022/platform-browser.mjs",
+      "file": "@angular_platform-browser.js",
+      "fileHash": "70ddb7d9",
+      "needsInterop": false
+    },
+    "@angular/router": {
+      "src": "../../../../../node_modules/@angular/router/fesm2022/router.mjs",
+      "file": "@angular_router.js",
+      "fileHash": "166bd5a5",
+      "needsInterop": false
+    },
+    "rxjs": {
+      "src": "../../../../../node_modules/rxjs/_esm5/index.js",
+      "file": "rxjs.js",
+      "fileHash": "4b8ec36a",
+      "needsInterop": false
+    },
+    "rxjs/operators": {
+      "src": "../../../../../node_modules/rxjs/_esm5/operators/index.js",
+      "file": "rxjs_operators.js",
+      "fileHash": "91c28286",
+      "needsInterop": false
+    }
+  },
+  "chunks": {
+    "chunk-Q4H2PS2B": {
+      "file": "chunk-Q4H2PS2B.js"
+    },
+    "chunk-G57IYKXM": {
+      "file": "chunk-G57IYKXM.js"
+    },
+    "chunk-M2ZH5ZFI": {
+      "file": "chunk-M2ZH5ZFI.js"
+    },
+    "chunk-FUTAX2QC": {
+      "file": "chunk-FUTAX2QC.js"
+    },
+    "chunk-EEPPBFIQ": {
+      "file": "chunk-EEPPBFIQ.js"
+    },
+    "chunk-BGHTEUUK": {
+      "file": "chunk-BGHTEUUK.js"
+    },
+    "chunk-DD56SOZX": {
+      "file": "chunk-DD56SOZX.js"
+    }
+  }
+}

@@ -1,12 +1,12 @@
 import { Component } from "@angular/core";
 import { NgForm } from "@angular/forms";
-import { AuthResponseData, AuthService } from "./auth.service";
 import { Observable } from "rxjs";
+
+import { AuthService, AuthResponseData } from "./auth.service";
 
 @Component({
   selector: "app-auth",
   templateUrl: "./auth.component.html",
-  styleUrl: "./auth.component.css",
 })
 export class AuthComponent {
   isLoginMode = true;
@@ -30,6 +30,7 @@ export class AuthComponent {
     let authObs: Observable<AuthResponseData>;
 
     this.isLoading = true;
+
     if (this.isLoginMode) {
       authObs = this.authService.login(email, password);
     } else {

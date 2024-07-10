@@ -3,15 +3,12 @@
     <div class="alert alert-danger" *ngIf="error">
       <p>{{ error }}</p>
     </div>
-
     <div *ngIf="isLoading" style="text-align: center">
       <app-loading-spinner></app-loading-spinner>
     </div>
-
     <form #authForm="ngForm" (ngSubmit)="onSubmit(authForm)" *ngIf="!isLoading">
       <div class="form-group">
         <label for="email">E-Mail</label>
-
         <input
           type="email"
           id="email"
@@ -22,7 +19,6 @@
           email
         />
       </div>
-
       <div class="form-group">
         <label for="password">Password</label>
         <input
@@ -35,7 +31,6 @@
           minlength="6"
         />
       </div>
-
       <div>
         <button
           class="btn btn-primary"

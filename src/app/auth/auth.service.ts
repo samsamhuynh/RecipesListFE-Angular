@@ -75,7 +75,6 @@ export class AuthService {
       _token: string;
       _tokenExpirationDate: string;
     } = JSON.parse(localStorage.getItem("userData"));
-
     if (!userData) {
       return;
     }
@@ -107,11 +106,9 @@ export class AuthService {
   }
 
   autoLogout(expirationDuration: number) {
-    console.log(expirationDuration);
-
     this.tokenExpirationTimer = setTimeout(() => {
       this.logout();
-    }, 2000);
+    }, expirationDuration);
   }
 
   private handleAuthentication(
@@ -121,9 +118,7 @@ export class AuthService {
     expiresIn: number
   ) {
     const expirationDate = new Date(new Date().getTime() + expiresIn * 1000);
-
     const user = new User(email, userId, token, expirationDate);
-
     this.user.next(user);
     this.autoLogout(expiresIn * 1000);
     localStorage.setItem("userData", JSON.stringify(user));
@@ -131,11 +126,9 @@ export class AuthService {
 
   private handleError(errorRes: HttpErrorResponse) {
     let errorMessage = "An unknown error occurred!";
-
     if (!errorRes.error || !errorRes.error.error) {
       return throwError(errorMessage);
     }
-
     switch (errorRes.error.error.message) {
       case "EMAIL_EXISTS":
         errorMessage = "This email exists already";
@@ -147,7 +140,6 @@ export class AuthService {
         errorMessage = "This password is not correct.";
         break;
     }
-
     return throwError(errorMessage);
   }
 }
